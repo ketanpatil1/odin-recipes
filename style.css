@@ -1,41 +1,84 @@
+@import url(https://fonts.bunny.net/css?family=alkatra:700);
+@import url(https://fonts.bunny.net/css?family=nunito:500);
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
     font-size: 20px;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
-    background-color: rgba(255, 250, 235, 1);
     font-family: Verdana, sans-serif;
     padding: 32px 0;
     margin: auto;
     width: 90%;
-    max-width: 1000px;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-row-gap: 64px;
+    grid-column-gap: 48px;
+    padding-inline-start: unset;
+}
+.recipe-list li {
+    list-style: none;
+}
+.recipe-list li .animation-effect {
+    border: 1px solid #efefef;
+    transition-property: transform, box-shadow, color;
+    transition-duration: 300ms;
+    height: 100%;
+}
+.recipe-list li:hover .animation-effect {
+    color: rgba(180, 120, 10, 1);
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px rgba(180, 120, 10, 1);
+    border-color: rgba(180, 120, 10, 1);
+}
+.recipe-list li:active .animation-effect {
+    box-shadow: 2px 2px rgba(180, 120, 10, 1);
+    transform: translate(-2px, -2px);
+}
+.recipe-list a {
+    text-decoration: none;
+    color: black;
+}
+.recipe-list li:hover a {
+    color: rgba(180, 120, 10, 1);
+}
+.recipe-list img {
+    width: 100%;
+}
+.recipe-list p {
+    font-size: 24px;
+    padding: 12px;
 }
 
 img {
     margin: auto;
-    margin-bottom: 20px;
     display: block;
-    border-radius: 10px;
     width: 80%;
     height: auto;
 }
 
 h1 {
+    font-family: 'Alkatra', display;
+    color: rgba(90, 60, 40, 1);
     text-align: center;
     font-size: 48px;
-    padding-bottom: 24px;
+    padding-bottom: 40px;
 }
 h2 {
     font-size: 28px;
     padding: 20px 0 8px;
+    color: rgba(90, 60, 40, 1);
 }
 
 div {
-    border-radius: 20px;
     margin: auto;
 }
 
@@ -43,10 +86,10 @@ ul, ol {
     align: center;
     padding-inline-start: 32px;
 }
-li {
-    padding: 4px 0;
-}
 
 a {
     color: rgba(180, 120, 10, 1);
+}
+a:hover {
+    color: rgba(220, 160, 50, 1)
 }
