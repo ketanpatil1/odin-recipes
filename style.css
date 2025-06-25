@@ -19,7 +19,7 @@
         --clr-accent: rgba(200, 140, 20, 1);
         --clr-accent-hover: rgba(160, 100, 0, 1);
         --clr-border: #242424;
-        --clr-heading: rgba(130, 90, 70, 1);
+        --clr-heading: rgba(150, 110, 90, 1);
         --clr-radio: black;
 
         --background: var(--clr-dark);
@@ -41,7 +41,7 @@
     --clr-accent: rgba(200, 140, 20, 1);
     --clr-accent-hover: rgba(160, 100, 0, 1);
     --clr-border: #242424;
-    --clr-heading: rgba(130, 90, 70, 1);
+    --clr-heading: rgba(150, 110, 90, 1);
     --clr-radio: black;
 
     --background: var(--clr-dark);
@@ -71,6 +71,8 @@ h1 {
     color: var(--clr-heading);
     text-align: center;
     font-size: 48px;
+    line-height: 72px;
+    margin-bottom: 16px;
 }
 
 .theme-picker {
@@ -143,26 +145,51 @@ svg {
     padding: 12px;
 }
 
-img {
-    margin: auto;
-    display: block;
-    width: 80%;
-    height: auto;
-}
-
 h2 {
     font-size: 28px;
-    padding: 20px 0 8px;
+    margin-top: 20px;
+    margin-bottom: 12px;
     color: var(--clr-heading);
 }
 
-div {
+div.recipe {
     margin: auto;
+    width: 95%;
+    max-width: 700px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+.recipe img {
+    margin-bottom: 28px;
 }
 
 ul, ol {
     align: center;
+}
+ul {
     padding-inline-start: 32px;
+}
+ol {
+    list-style-position: inside;
+    counter-reset: step;
+    list-style-type: none;
+}
+li::marker,
+li::before {
+    color: var(--clr-accent);
+}
+ol li::before {
+    content: "Step " counter(step);
+    counter-increment: step;
+}
+ol li p {
+    margin-bottom: 16px;
 }
 
 a {
