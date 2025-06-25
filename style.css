@@ -198,3 +198,10 @@ a {
 a:hover {
     color: var(--clr-accent-hover);
 }
+
+.back-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 32px;
+}
