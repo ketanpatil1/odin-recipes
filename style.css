@@ -90,11 +90,18 @@ label {
     justify-content: center;
     align-items: center;
     padding: 6px 12px;
-    border: 4px solid var(--clr-border);
+    border: 2px solid var(--clr-border);
+    transition-property: background-color, color;
+    transition-duration: 300ms;
 }
+label:hover {
+    background-color: var(--clr-accent);
+}
+label:has(input[type="radio"]:active),
 label:has(input[type="radio"]:checked) {
     background-color: var(--clr-radio);
     color: var(--clr-accent);
+    transition-duration: 150ms;
 }
 span {
     font-size: 16px;
@@ -122,7 +129,7 @@ svg {
 }
 .recipe-list li:hover .animation-effect {
     color: var(--clr-accent);
-    transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px) scale(1.05);
     box-shadow: 10px 10px var(--clr-accent);
     clr-border: var(--clr-accent);
 }
@@ -167,6 +174,10 @@ img {
 }
 .recipe img {
     margin-bottom: 28px;
+    transition: transform 300ms;
+}
+.recipe img:hover {
+    transform: scale(1.1);
 }
 
 ul, ol {
@@ -191,9 +202,13 @@ ol li::before {
 ol li p {
     margin-bottom: 16px;
 }
+ol img {
+    transform-origin: 50% 0%;
+}
 
 a {
     color: var(--clr-accent);
+    transition: color 200ms;
 }
 a:hover {
     color: var(--clr-accent-hover);
