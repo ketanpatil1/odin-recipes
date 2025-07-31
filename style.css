@@ -127,11 +127,13 @@ svg {
     transition-duration: 300ms;
     height: 100%;
 }
-.recipe-list li:hover .animation-effect {
-    color: var(--clr-accent);
-    transform: translate(-5px, -5px) scale(1.05);
-    box-shadow: 10px 10px var(--clr-accent);
-    clr-border: var(--clr-accent);
+@media (hover: hover) {
+    .recipe-list li:hover .animation-effect {
+        color: var(--clr-accent);
+        transform: translate(-5px, -5px) scale(1.05);
+        box-shadow: 10px 10px var(--clr-accent);
+        clr-border: var(--clr-accent);
+    }
 }
 .recipe-list li:active .animation-effect {
     box-shadow: 2px 2px var(--clr-accent);
