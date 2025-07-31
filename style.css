@@ -170,7 +170,6 @@ img {
     margin: auto;
     width: 100%;
     max-width: 800px;
-    height: auto;
 }
 .recipe img {
     margin-bottom: 28px;
@@ -178,6 +177,9 @@ img {
 }
 .recipe img:hover {
     transform: scale(1.1);
+}
+.img-container {
+    overflow: clip;
 }
 
 ul, ol {
@@ -203,7 +205,7 @@ ol li p {
     margin-bottom: 16px;
 }
 ol img {
-    transform-origin: 50% 0%;
+    transform-origin: 50% 50%;
 }
 
 a {
