@@ -10,8 +10,8 @@
     --clr-heading: rgba(90, 60, 40, 1);
     --clr-radio: white;
 
-    --background: var(--clr-light);
-    --foreground: var(--clr-dark);
+    --clr-background: var(--clr-light);
+    --clr-foreground: var(--clr-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,8 +22,8 @@
         --clr-heading: rgba(150, 110, 90, 1);
         --clr-radio: black;
 
-        --background: var(--clr-dark);
-        --foreground: var(--clr-light);
+        --clr-background: var(--clr-dark);
+        --clr-foreground: var(--clr-light);
     }
 }
 
@@ -34,8 +34,8 @@
     --clr-heading: rgba(90, 60, 40, 1);
     --clr-radio: white;
 
-    --background: var(--clr-light);
-    --foreground: var(--clr-dark);
+    --clr-background: var(--clr-light);
+    --clr-foreground: var(--clr-dark);
 }
 :root:has(#dark:checked) {
     --clr-accent: rgba(200, 140, 20, 1);
@@ -44,8 +44,8 @@
     --clr-heading: rgba(150, 110, 90, 1);
     --clr-radio: black;
 
-    --background: var(--clr-dark);
-    --foreground: var(--clr-light);
+    --clr-background: var(--clr-dark);
+    --clr-foreground: var(--clr-light);
 }
 
 *, *::before, *::after {
@@ -57,13 +57,18 @@
     font-family: 'Nunito', sans-serif;
 }
 
+::selection {
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+}
+
 body {
     font-family: Verdana, sans-serif;
     padding: 32px 0;
     margin: auto;
     width: 90%;
-    background: var(--background);
-    color: var(--foreground);
+    background: var(--clr-background);
+    color: var(--clr-foreground);
 }
 
 h1 {
@@ -141,7 +146,7 @@ svg {
 }
 .recipe-list a {
     text-decoration: none;
-    color: var(--foreground);
+    color: var(--clr-foreground);
 }
 .recipe-list li:hover a {
     color: var(--clr-accent);
